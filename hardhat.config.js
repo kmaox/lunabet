@@ -23,10 +23,10 @@ require("@nomiclabs/hardhat-etherscan");
 // To export your private key from Metamask, open Metamask and
 // go to Account Details > Export Private Key
 // Be aware of NEVER putting real Ether into testing accounts
-const RINKEBY_PRIVATE_KEY = "";
+const RINKEBY_PRIVATE_KEY = "0x";
 
 module.exports = {
-  solidity: "0.8.12",
+  solidity: "0.8.9",
   networks: {
     rinkeby: {
       url: 'https://eth-rinkeby.alchemyapi.io/v2/YzUO9BBO6O-DBXi27dTAD2fxdnsgfzpL',
