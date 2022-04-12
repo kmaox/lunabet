@@ -46,6 +46,7 @@ contract LunaBet {
 
     address gcr = 0xdA27937582B0ed4211e9C322778658b7B151e44d;
     address dokwon = 0x4Ef3933d49689E05A3d337c73F4B7F40C5E9b5dE;
+    uint start = block.timestamp;
     
     function claimReward() external {
 
@@ -53,15 +54,16 @@ contract LunaBet {
       require(getLatestPrice() < 3500, "ETH Price is lower than 3500");
       
       // has enough time passed?
-      require(block.timestamp >  start + 3 minutes, "Not enough time has passed") 
+      require(block.timestamp >  start + 3 minutes, "Not enough time has passed");
 
-      
+      // send winnings
+      sendUSDT(gcr, 1000);
     }
 
     AggregatorV3Interface internal priceFeed;
       
     function sendUSDT(address _to, uint256 _amount) internal {
-        IERC20 usdt = IERC20(address(0xdAC17F958D2ee523a2206206994597C13D831ec7));
+        IERC20 usdt = IERC20(address(0xD92E713d051C37EbB2561803a3b5FBAbc4962431));
         usdt.transfer(_to, _amount);
     }
 
