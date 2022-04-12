@@ -26,7 +26,7 @@ require("@nomiclabs/hardhat-etherscan");
 const RINKEBY_PRIVATE_KEY = "";
 
 module.exports = {
-  solidity: "0.8.4",
+  solidity: "0.8.12",
   networks: {
     rinkeby: {
       url: 'https://eth-rinkeby.alchemyapi.io/v2/YzUO9BBO6O-DBXi27dTAD2fxdnsgfzpL',
