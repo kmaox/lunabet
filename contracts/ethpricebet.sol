@@ -42,7 +42,7 @@ interface AggregatorV3Interface {
 }
 
 // Contract implementatin
-contract LunaBet {
+contract EthPriceBet {
 
     address gcr = 0xdA27937582B0ed4211e9C322778658b7B151e44d;
     address dokwon = 0x4Ef3933d49689E05A3d337c73F4B7F40C5E9b5dE;
